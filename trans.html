@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .square1 {
+            background: #00aa9d;
+            border-radius: 3px;
+            height: 150px;
+            top: 100px;
+            /* right: 100px; */
+            left: 200px;
+            position: absolute;
+            transition: transform 1.8s;
+            width: 150px;
+        }
+
+        .square2 {
+            background: #2b3f53;
+            border-radius: 3px;
+            top: 100px;
+            left: 200px;
+            height: 150px;
+            transition: transform 1.8s;
+            position: absolute;
+            width: 150px;
+        }
+
+        .square2:hover {
+            /* transform: translate(50px, 80px); */
+            /* transform: translateY(80px); */
+            transform: translateX(80px);
+            
+        }
+
+        .card_content:before {
+            content: '';
+            position: absolute;
+            top: -47px;
+            right: -45px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-175deg);
+            border-radius: 50%;
+            box-shadow: inset 48px 48px #ffc600;
+        }
+
+        .Gride_Card {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 20px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .card_content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: #ffc600;
+            border-top-left-radius: 20px;
+            transform: translateY(150px);
+            transition: transform .25s;
+        }
+
+        .Gride_Card:hover .card_content {
+            transform: translateY(0);
+        }
+
+        .Guide_Image {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square1"></div>
+    <div class="square2"></div>
+
+
+    <div class="Gride_Card">
+        <div class='Guide_Image'></div>
+        <div class="card_content">
+            <span class="card_title">Fine in India</span>
+            <span class="card_subtitle">Thsi is a subtitle of this page. Let us see how it looks on the Web.</span>
+            <p class="card_description">Lorem ipsum dolor, sit amet expedita exercitationem recusandae aut dolor
+                tempora aperiam itaque possimus at, cupiditate earum, quae repudiandae aspernatur? Labore minus soluta
+                consequatur placeat.</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

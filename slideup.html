@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .mainc {
+            position: relative;
+            background-color: red;
+            height: 400px;
+            overflow: hidden;
+            width: 400px;
+        }
+
+        .innerc {
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+
+        .bottomc {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            transform: translateY(350px);
+            background-color: pink;
+            transition: transform .25s;
+        }
+
+        .bottomc:before {
+            content: '';
+            position: absolute;
+            top: -45px;
+            right: -45px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-175deg);
+            border-radius: 50%;
+            box-shadow: inset 48px 48px pink;
+        }
+
+        .mainc:hover .bottomc {
+            transform: translateY(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Slide</h3>
+    <div class="mainc">
+        <div class="innerc"></div>
+        <div class="bottomc"></div>
+    </div>
+</body>
+
+</html>
