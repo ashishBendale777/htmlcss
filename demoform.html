@@ -6,19 +6,46 @@
 </head>
 
 <body>
-    <form action="">
-        <label>First Name</label>
-        <input type="text" id="fname" placeholder="Enter Name" />
 
-        <label>Last Name</label>
-        <input type="text" id="lname" placeholder="Enter Last Name" />
-    </form>
-    <button id="btnok">OK</button>
+    <br><b> Choose your Gender: </b><br>
+    <input type="radio" name="gender" id="male" value="M"> Male <br>
+    <input type="radio" name="gender" id="female" value="F"> Female <br>
+    <br><br>
 
+    <br><b> Choose your Course: </b><br>
+    <input type="checkbox" name="course" id="BCA" value="BCA"> BCA <br>
+    <input type="checkbox" name="course" id="MCA" value="MCA"> MCA <br>
+    <input type="checkbox" name="course" id="MSc" value="MSc"> MSc <br>
+    <br><br>
+    <button type="button" onclick=" checkButton()"> Submit </button>
 
-    <p id="data">DATA</p>
-
-    <script src="form.js"></script>
+    <h3 id="disp" style="color:green"> </h3>
+    <h4 id="error" style="color:red"> </h4>
 </body>
+
+<script>
+    function checkButton() {
+        var getSelectedValue = document.querySelector(
+            'input[name="gender"]:checked');
+
+        if (getSelectedValue != null) {
+            document.getElementById("disp").innerHTML
+                = getSelectedValue.value
+                + " season is selected";
+        }
+        else {
+            document.getElementById("error").innerHTML
+                = "*You have not selected any gender";
+        }
+
+        var selectedCourses = document.getElementsByName("course")
+        for (let course of selectedCourses) {
+            if (course.checked == true){
+                console.log(course.value)
+            }
+        }
+    }    
+</script>
+< </body>
 
 </html>
