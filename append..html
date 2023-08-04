@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Append Child</h3>
+    <ul id="namelist"></ul>
+    
+</body>
+<script>
+    var names=["Ashish","Sam","Dhiraj"]
+    var ul=document.getElementById("namelist")
+    for (let name of names) {
+        var liele=document.createElement("li")
+        liele.innerHTML=name
+        ul.appendChild(liele)
+        
+    }
+</script>
+</html>

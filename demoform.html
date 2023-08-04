@@ -21,6 +21,8 @@
 
     <h3 id="disp" style="color:green"> </h3>
     <h4 id="error" style="color:red"> </h4>
+
+    <ul id="namelist"></ul>
 </body>
 
 <script>
@@ -40,12 +42,20 @@
 
         var selectedCourses = document.getElementsByName("course")
         for (let course of selectedCourses) {
-            if (course.checked == true){
+            if (course.checked == true) {
                 console.log(course.value)
             }
         }
-    }    
+    }
+
+    var names = ["Ashish", "Sam", "Abhi"]
+    var namelist = document.getElementById("namelist")
+    for (let name of names) {
+        let lIelement = document.createElement("li")
+        lIelement.innerHTML=name
+        namelist.appendChild(lIelement)
+    }
 </script>
-< </body>
+</body>
 
 </html>
